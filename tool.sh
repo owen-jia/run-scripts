@@ -24,4 +24,4 @@ if [ -n $1 ]; then
 else
 	echo "options is invalid,eg.. start|stop|status|help"
 fi
-exec ./process.sh "$RUN_FILE" "$OPTION" "$PARAMS"
+exec ./bin/proc.sh "$RUN_FILE" "$OPTION" "$PARAMS" "$BASE_PATH"

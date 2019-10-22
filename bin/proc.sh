@@ -11,14 +11,14 @@ OPTION=$2
 PID_FILE="run.pid"
 RUN_LOG="run.log"
 PID=0;
-BASE_PATH=$(cd `dirname $0`; pwd)
+BASE_PATH=$4
 
 # file path
 cd $BASE_PATH
 
 # to check options, and format options
 if [ -z $OPTION -o -z $RUN_FILE ]; then
-	echo "---- Parameters are invalid. eg. ./iamanage.sh start|stop|status|help ----"
+	echo "---- Parameters are invalid. eg. ./tool.sh start|stop|status|help ----"
 	exit 0
 else
 	# check Run_file name,eg.. *.jar
