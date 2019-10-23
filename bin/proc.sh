@@ -54,7 +54,7 @@ start(){
 		echo ""
 		echo "---- OPTIONS: java $RUN_OPTIONS -jar $RUN_FILE $RUN_PARAMS > $BASE_PATH/$RUN_LOG ----"
 		echo ""
-		nohup java $RUN_OPTIONS -jar $RUN_FILE $RUN_PARAMS > ./$RUN_LOG 2>&1 &
+		nohup java -server $RUN_OPTIONS -jar $RUN_FILE $RUN_PARAMS > ./$RUN_LOG 2>&1 &
 		if [ $? != 0 ]; then
 			echo "---- Start $RUN_FILE is failure. ----"
 		else
